@@ -6,9 +6,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@subkey
+      - uses: actions/checkout@v2
       - name: Import GPG Key
-        uses: crazy-max/ghaction-import-gpg@subkey
+        uses: crazy-max/ghaction-import-gpg@v4
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
